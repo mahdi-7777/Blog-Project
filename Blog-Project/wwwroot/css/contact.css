@@ -1,0 +1,78 @@
+@font-face {
+    font-family: yekan;
+    src: url(../font/iranyekanwebbold.ttf);
+}
+
+*{
+    font-family: yekan;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  rgba(12, 43, 71);
+    background-image: url(../img/map-image.png);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/*contact*/
+input{
+    border: none;
+    background: none;
+    border: 2px solid white;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 10px;
+    outline: none;
+    transition:all .7s;
+}
+
+.input:focus{
+    border:2px solid rgb(245, 111, 22);
+}
+
+.label{
+    display: block;
+    color: white;
+}
+
+.text-input{
+    border: none;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    transition: all .7s;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+.text-input:focus{
+    border:2px solid rgb(245, 111, 22);
+}
+
+.form-btn{
+    background-color: rgb(245, 111, 22);
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    transition: all .7s;
+}
+
+.form-btn:hover{
+    background-color: rgba(245, 111, 22, 0.767);
+}
+
+
+/*contact*/

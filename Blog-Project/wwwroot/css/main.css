@@ -1,0 +1,213 @@
+@font-face {
+    font-family: yekan;
+    src: url(../font/iranyekanwebbold.ttf);
+}
+
+*{
+    font-family: yekan;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/*navbar*/
+@media(max-width : 992px){
+    .header-text{
+        position: relative;
+    }
+
+    .my-li{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .my-nav-ul{
+        margin-top: 10px;
+    }
+
+    .header-t1{
+        font-size: 40px;
+        margin-top: 50px;
+    }
+    
+    .header-t3{
+        font-size: 50px;
+        margin-top: 300px;
+    }
+
+}
+@media(max-width : 768px){
+
+    .header-t1{
+        font-size: 20px;
+    }
+    
+    .header-t3{
+        font-size: 30px;
+    }
+}
+
+.my-li{
+    color: rgba(12, 43, 71);
+    transition: all .5s;
+    font-size: 18px;
+}
+
+.my-li:hover{
+    color: rgb(84, 136, 182);
+}
+
+.my-nav-btn{
+    color: white;
+    background-color: rgba(12, 43, 71) ;
+    transition: all .5s;
+    border-radius: 50px;
+}
+
+.my-nav-btn:hover{
+    color: rgba(12, 43, 71);
+    background-color: rgb(84, 136, 182) ;
+}
+
+.my-button{
+    border: 0;
+    box-shadow: none;
+    transition: all .4s;
+}
+
+.my-button:focus{
+    border: 0;
+    box-shadow: none;
+    border: 2px solid rgba(12, 43, 71);
+}
+.line1 , .line2 , .line3{
+    width: 25px;
+    margin: 4px;
+    height: 3px;
+    transition: all 0.4s;
+    background-color: rgba(12, 43, 71);
+}
+/*navbar*/
+/*header*/
+.my-header{
+    background: linear-gradient(-105deg , rgba(12, 43, 71, 0.9) 0% , rgba(12,43,71,0.9) 50% , transparent 50%) , url(../img/html-system-websites-concept.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+
+.header-t1{
+    position: absolute;
+    top: 30%;
+    left: 75%;
+}
+
+.header-t3{
+    position: absolute;
+    top: 55%;
+    left: 60%;
+}
+/*header*/
+/*cards*/
+  
+
+.card-style{
+    border: 0;
+    border-radius: 10px;
+}
+
+.my-card-img{
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.date{
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: rgba(255,255,255,.5);
+    transition: all .7s;
+    
+}
+
+.my-card-title{
+    color: rgba(12, 43, 71);
+}
+
+
+
+.my-card-span{
+    display: none;
+}
+
+.my-card:hover .my-card-span{
+    display: block;
+}
+
+.my-card:hover .date{
+    background-color: rgba(0,0,0,.6);
+    border-radius: 50px;
+}
+
+.my-card-btn{
+    background-color: rgba(12, 43, 71);
+    color: white;
+    transition: all .5s;
+}
+
+.my-card-btn:hover{
+    background-color: rgb(84, 136, 182);
+    color: rgba(12, 43, 71);
+}
+
+/*pagination*/
+.my-pagin{
+    display: inline-block;
+}
+
+.my-pagin a{
+    color: rgba(12, 43, 71);
+    float: right;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 0px 2px;
+    border: 2px solid rgba(12, 43, 71);
+    border-radius: 5px;
+}
+
+.my-pagin a:hover{
+    background-color: white;
+}
+
+.my-pagin a:hover:not(.active){
+    background-color: white;
+}
+
+.my-pagin a.active{
+    background-color: rgb(84, 136, 182);
+    color: #fff;
+}
+
+
+/*pagination*/
+/*cards*/
+/*footer*/
+.my-footer{
+    background-color: rgba(12, 43, 71);
+}
+/*footer*/

@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <!--card1-->
+        @foreach (var article in Model.Articles)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+
+                <a href="" class="my-card">
+
+                    <div class="card card-style">
+
+                        <div class="card-img">
+                            <img src="@article.Picture" width="100%" alt="@article.PictureAlt " title="@article.PictureTitle" class="my-card-img">
+                            <div class="date d-flex p-1">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title my-card-title h4">@article.Title</div>
+                            <p class="my-card-p text-muted"> @article.ShortDescription</p>
+                            <a asp-page="./ArticleDetail" asp-route-id="@article.Id" class="btn my-card-btn ">مشاهده خبر</a>
+
+                            <a asp-page-handler="Delete" asp-route-id="@article.Id" class="btn btn-danger "> حذف مقاله </a>
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+        }
+    </div>
+
+</div>
+
+

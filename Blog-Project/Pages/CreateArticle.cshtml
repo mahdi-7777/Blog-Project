@@ -1,0 +1,126 @@
+﻿@page
+@model Blog_Project.Pages.CreateArticleModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>افزودن خبر</title>
+    <link rel="stylesheet" href="./css/bootstrap.fa.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/add-news.css">
+    <script src="https://kit.fontawesome.com/f0cc3ee564.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg my-nav shadow">
+        <button class="navbar-toggler my-button" data-toggle="collapse" data-target="#my-collapse">
+            <div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="my-collapse">
+            <ul class="navbar-nav list-unstyled my-nav-ul ml-auto">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link my-li mx-3">صفحه اصلی</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link my-li mx-3">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link my-li mx-3">ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-li mx-3" asp-page="/CreateArticle">افزودن خبر </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mr-auto navbar-brand ml-4">
+            <a href="./register.html" class="btn my-nav-btn">ثبت نام</a>
+            <a href="./login.html" class="btn my-nav-btn">ورود</a>
+        </div>
+    </nav>
+    <!--navbar-->
+    <!--add news-->
+    <section class="p-5">
+        <div class="container-fluid">
+            <h2 class="" style="color: rgba(12, 43, 71);">افزودن خبر جدید</h2>
+                <div class=" mx-auto">
+                    <div class="mt-5 rounded bg-light shadow" style=" border: 1px solid rgba(12, 43, 71);">
+                        <span class="text-light d-block pr-3 py-1" style="background-color: rgba(12, 43, 71);">اطلاعات خبر</span>
+                        <!--form-->
+                    <form method="post" class="m-4">
+                           <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mt-3">
+                                    <label asp-for="@Model.Command.Title" class="label">عنوان خبر :</label>
+                                    <input class="input" asp-for="@Model.Command.Title">
+                                    <span asp-validation-for="@Model.Command.Title" class="text-danger"></span>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <label asp-for="@Model.Command.ShortDescription" class="label">خلاصه خبر :</label>
+                                    <textarea asp-for="@Model.Command.ShortDescription" cols="80" rows="2" class="text-input"></textarea>
+                                    <span asp-validation-for="@Model.Command.ShortDescription" class="text-danger"></span>
+                                </div> 
+                                
+                              
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mt-3">
+                                    <label asp-for="@Model.Command.Body" class="label">متن خبر :</label>
+                                    <textarea asp-for="@Model.Command.Body" id="" cols="80" rows="8" class="text-input"></textarea>
+                                    <span asp-validation-for="@Model.Command.Body" class="text-danger"></span>
+                                </div>
+                            </div>
+                           </div>
+                        <div class="bg-light rounded shadow mt-5" style="border-top: 2px solid rgba(12, 43, 71);">
+                            <span class="p-3 border-bottom d-block" style="color: rgba(12, 43, 71);">تصویر خبر</span>
+
+                            <div class="input-group">
+
+                                <input class="form-control" asp-for="@Model.Command.Picture">
+
+                            </div>
+                           
+                            </div>
+                        <div class="input-group mt-3">
+                            <label asp-for="@Model.Command.PictureTitle" class="label">عنوان تصویر:</label>
+                            <textarea asp-for="@Model.Command.PictureTitle" cols="80" rows="2" class="text-input"></textarea>
+                            <span asp-validation-for="@Model.Command.PictureTitle" class="text-danger"></span>
+                        </div>
+                        <div class="input-group mt-3">
+                            <label asp-for="@Model.Command.PictureAlt" class="label">Alt تصویر</label>
+                            <textarea asp-for="@Model.Command.PictureAlt" cols="80" rows="2" class="text-input"></textarea>
+                            <span asp-validation-for="@Model.Command.PictureAlt" class="text-danger"></span>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn form-btn mt-4  ">افزودن خبر</button>
+                        </div>
+                        </form>
+                        <!--form-->
+                    </div>
+                    
+                     
+                    </div>
+                    
+                  
+                </div>
+                <div class="col-lg-4">
+                   
+                </div>
+        </div>
+    </section>
+    <!--add news-->
+
+     <!--script-->
+     <script src="./script/jquery-3.5.1.min.js"></script>
+     <script src="./script/popper.min.js"></script>
+     <script src="./script/bootstrap.min.js"></script>
+     <!--script-->
+</body>
+</html>

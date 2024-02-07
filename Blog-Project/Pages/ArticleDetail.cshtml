@@ -1,0 +1,138 @@
+﻿@page
+@model Blog_Project.Pages.ArticleDetailModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بهترین زبان برنامه نویسی برای دورکاری و فریلنسری</title>
+    <link rel="stylesheet" href="./css/bootstrap.fa.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/f0cc3ee564.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg my-nav shadow">
+        <button class="navbar-toggler my-button" data-toggle="collapse" data-target="#my-collapse">
+            <div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="my-collapse">
+            <ul class="navbar-nav list-unstyled my-nav-ul ml-auto">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link my-li mx-3">صفحه اصلی</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link my-li mx-3">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link my-li mx-3">ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./add-news.html" class="nav-link my-li mx-3">افزودن خبر</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mr-auto navbar-brand ml-4">
+            <a href="./register.html" class="btn my-nav-btn">ثبت نام</a>
+            <a href="./login.html" class="btn my-nav-btn">ورود</a>
+        </div>
+    </nav>
+    <!--navbar-->
+    <section class="p-5">
+        <div class="container-fluid">
+            <h1 class="" style="color: rgba(12, 43, 71);">@Model.Article.Title</h1>
+            <div class="mt-4">
+                <span class="text-muted">کد خبر :@Model.Article.Id</span>
+                <span class="mr-5 text-muted">انتشار : @Model.Article.CreationDate</span>
+            </div>
+            <div class="p-4 mt-4 text-light rounded" style="background-color: rgba(12, 43, 71);">
+                <p class="">@Model.Article.ShortDescription</p>
+            </div>
+            <img src="./img/danial-igdery-FCHlYvR5gJI-unsplash.jpg" width="100%" alt="" class="mt-5 rounded">
+            <div class="shadow rounded  p-4 bg-light">
+                عامل های IOS, macOS, watchOS, tvOS به کار گرفته میشود. اپلیکیشنهای نوشته شده به وسیله ی سوئیفت در دستگاههای iPhone،iPad  قابل نصب و اجرا است. ازجمله ویژگی های مثبت این زبان برنامه نویسی به شرح زیر است:
+                </p>
+                <p class="">
+                  @Model.Article.Body
+                </p>
+               
+            </div>
+        </div>
+        @* <h3 class="mt-5" style="color: rgba(12, 43, 71);;">خبرهای مرتبط</h3>
+        <div class="row">
+            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-6 mt-4">
+                <a href="" class="my-card">
+                    <div class="card card-style" style="height: 420px;">
+                        <div class="card-img">
+                            <img src="./img/juanjo-jaramillo-mZnx9429i94-unsplash.jpg" width="100%" alt="" class="my-card-img">
+                            <div class="date d-flex p-1">
+                                <i class="fa-regular fa-clock mt-1"></i>
+                                <span class="my-card-span mr-1">مرداد ۱۴۰۲,۱۰</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title my-card-title h4">استفاده از هوش مصنوعی در کد نویسی باعث ایجاد آسیب پذیری های امنیتی می شود</div>
+                            <a href="./card6.html" class="btn my-card-btn ">مشاهده خبر</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-6 mt-4">
+                <a href="" class="my-card">
+                    <div class="card card-style" style="height: 420px;">
+                        <div class="card-img">
+                            <img src="./img/andy-kelly-0E_vhMVqL9g-unsplash.jpg" width="100%" alt="" class="my-card-img">
+                            <div class="date d-flex p-1">
+                                <i class="fa-regular fa-clock mt-1"></i>
+                                <span class="my-card-span mr-1">مرداد ۱۴۰۲,۱۰</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title my-card-title h4">مراسم I/O 2023 گوگل؛ نمایش فناوری های هوش مصنوعی</div>
+                            <a href="./card4.html" class="btn my-card-btn mt-4">مشاهده خبر</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div> *@
+    </section>
+    <!--footer-->
+    <footer class="my-footer py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class=" text-center">
+                        <span class=" text-light">Privacy Policy</span>
+                        <span class="ml-3 text-light">Terms of Use</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <a href="" class=" text-light"><i class="fa-brands fa-github fa-2x"></i></a>
+                        <a href="" class=" text-light"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center text-light">
+                        Copyright © Your Website 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+    <!--script-->
+    <script src="./script/jquery-3.5.1.min.js"></script>
+    <script src="./script/popper.min.js"></script>
+    <script src="./script/bootstrap.min.js"></script>
+    <!--script-->
+</body>
+</html>

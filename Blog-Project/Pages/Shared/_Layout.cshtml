@@ -1,0 +1,107 @@
+﻿@{
+    var username = TempData["Username"] as string;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخبار دنیای برنامه نویسی</title>
+    <link rel="stylesheet" href="./css/bootstrap.fa.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/f0cc3ee564.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg my-nav">
+        <button class="navbar-toggler my-button" data-toggle="collapse" data-target="#my-collapse">
+            <div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </button>
+        <div class="collapse navbar-collapse" id="my-collapse">
+            <ul class="navbar-nav list-unstyled my-nav-ul ml-auto">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link my-li mx-3">صفحه اصلی</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link my-li mx-3">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.html" class="nav-link my-li mx-3">ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link my-li mx-3" asp-page="/CreateArticle">افزودن خبر</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mr-auto navbar-brand ml-4">
+            @if (!string.IsNullOrEmpty(username))
+            {
+                <span class="navbar-text">@username</span>
+                <span class="navbar-text"> خوش آمدید </span>
+            }
+            else
+            {
+                <a asp-page="/Register" class="btn my-nav-btn">ثبت نام</a>
+                <a asp-page="/Login" class="btn my-nav-btn">ورود</a>
+            }
+
+        </div>
+    </nav>
+    <!--navbar-->
+    <!--header-->
+    <section class="my-header ">
+        <div class="header-text">
+            <h1 class="header-t1 text-light display-4 ">اخبار دنیای</h1>
+            <h1 class="header-t3 text-light display-3">برنامه نویسی</h1>
+        </div>
+    </section>
+    <!--header-->
+    <!--cards-->
+    @RenderBody();
+    <!--card1-->
+    @*  <!--pagination-->
+    <div class="my-pagin justify-content-center d-flex mt-4">
+    <a href="">&laquo;</a>
+    <a href="">۳</a>
+    <a href="">۲</a>
+    <a href="" class="active">۱</a>
+    <a href="">&raquo;</a>
+    </div> *@
+    <!--pagination-->
+    <!--cards-->
+    <!--footer-->
+    <footer class="my-footer py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class=" text-center">
+                        <span class=" text-light">Privacy Policy</span>
+                        <span class="ml-3 text-light">Terms of Use</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <a href="#" class=" text-light"><i class="fa-brands fa-github fa-2x"></i></a>
+                        <a href="#" class=" text-light"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center text-light">
+                        Copyright © Your Website 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+    <!--script-->
+    <script src="./script/jquery-3.5.1.min.js"></script>
+    <script src="./script/popper.min.js"></script>
+    <script src="./script/bootstrap.min.js"></script>
+    <!--script-->
+</body>
+</html>
